@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_login_bk"
+    tools:context=".activitys.FoodDonate">
+
+    <View
+        android:id="@+id/act_f_s_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#047BD5"
+        app:layout_constraintBottom_toTopOf="@+id/act_f_s_view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
+
+    <TextView
+        android:id="@+id/act_f_d__textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="36dp"
+        android:layout_marginVertical="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="3dp"
+        android:text="@string/donate"
+        android:fontFamily="@font/almendra_bold"
+        android:textColor="#fff"
+        android:textSize="30sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <View
+        android:id="@+id/act_f_s_view3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_wave_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_s_top_view"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/act_f_d__foodname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_s_view3"
+        tools:ignore="MissingConstraints,NotSibling">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/act_f_d__foodnamename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryTextColor"
+            android:hint="@string/food_name"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/act_f_d__foodweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/act_f_d__foodname"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_d__foodname"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/act_f_d__foodweightname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryTextColor"
+            android:hint="@string/food_weight"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/act_f_d__foodprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/act_f_d__foodweight"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_d__foodweight"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/act_f_d__foodpricename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryTextColor"
+            android:hint="@string/food_price"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/act_f_d__totalefood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/act_f_d__foodprice"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_d__foodprice"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/act_f_d__totalefoodname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryTextColor"
+            android:hint="@string/num_of_food_order"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/act_f_d__foodallinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/act_f_d__totalefood"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_d__totalefood"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/act_f_d__foodallinfoname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryTextColor"
+            android:hint="Food Information"
+            android:inputType="textPostalAddress"
+            android:maxLines="1"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/act_f_d__fooddatename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_edittext"
+        android:fontFamily="@font/adamina"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Food Date"
+        android:textColor="#047BD5"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/act_f_d__totalefood"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_d__foodallinfo" />
+
+    <Button
+        android:id="@+id/act_f_d__foodtimename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/border_edittext"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/food_time"
+        android:textColor="#047BD5"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/act_f_d__fooddatename"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/act_f_d__foodallinfo"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_d__foodallinfo" />
+
+    <Button
+        android:id="@+id/act_f_d__submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="60dp"
+        android:background="@drawable/sumit_button"
+        android:text="@string/submit"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_f_d__foodtimename" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-40dp"
+        android:src="@drawable/swberry"
+        android:rotation="150"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/act_f_d__submit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="110dp"
+        android:src="@drawable/apple1"
+        app:layout_constraintEnd_toStartOf="@+id/act_f_d__textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

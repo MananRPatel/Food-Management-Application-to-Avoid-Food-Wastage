@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginBkColor"
+    tools:context=".activitys.Profile">
+
+
+    <Button
+        android:id="@+id/prologoutb"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border_edittext"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="Log Out"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/profile_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:elevation="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/user_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/prouser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:text="User Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/card1_background"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Cart  Money"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/money"
+            android:layout_marginTop="18dp"
+            android:elevation="3dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/dsec" />
+
+        <TextView
+            android:id="@+id/procartmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp"
+            android:text="$100"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/card3_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout1">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/points"
+            android:layout_marginTop="20dp"
+            android:elevation="3dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/dsec" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Donate Point"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/prodonate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp"
+            android:text="100"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/relativeLayout4"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#FFDCDC"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/prohistorybuttton"
+            android:layout_width="120dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:rotation="20"
+            android:src="@drawable/history" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-5dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_bookmark_24dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/patton2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4"
+        tools:ignore="MissingConstraints">
+
+    </ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
