@@ -163,7 +163,7 @@
             android:id="@+id/act_f_s_foodallinfoname"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primaryTextColor"
-            android:hint="Food Information"
+            android:hint="@string/finfo"
             android:inputType="textPostalAddress"
             android:maxLines="1"
             android:padding="12dp" />
@@ -179,7 +179,7 @@
         android:fontFamily="@font/adamina"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="Food Date"
+        android:text="@string/fdate"
         android:textColor="#047BD5"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -230,7 +230,8 @@
         app:layout_constraintStart_toEndOf="@+id/act_f_s_submit"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/dsec" />
 
     <ImageView
         android:layout_width="100dp"
@@ -239,7 +240,8 @@
         android:src="@drawable/apple1"
         app:layout_constraintEnd_toStartOf="@+id/act_f_s_textView2"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/dsec" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

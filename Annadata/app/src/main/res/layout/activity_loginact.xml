@@ -15,26 +15,16 @@
         tools:ignore="MissingConstraints">
 
         <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:weightSum="12">
+            android:layout_width="match_parent"
+            android:background="@drawable/login_shape_bk"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_height="wrap_content"
+            <ImageView
                 android:layout_width="match_parent"
-                android:background="@drawable/login_shape_bk"
-                android:orientation="vertical"
-                android:layout_weight="3">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_login_bk"
-                    android:contentDescription="login background" />
-
-            </LinearLayout>
-
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_login_bk"
+                android:contentDescription="@string/dsec" />
 
         </LinearLayout>
 
@@ -118,7 +108,7 @@
                     <TextView
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
-                        android:text="Forgot Password?"
+                        android:text="@string/forget"
                         android:background="?attr/selectableItemBackground"
                         android:textColor="@color/primaryTextColor"
                         android:textSize="12sp"
@@ -133,7 +123,7 @@
                         android:layout_margin="30dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/login_button_bk"
-                        android:text="Log in"
+                        android:text="@string/login"
                         android:textColor="@color/whiteTextColor"
                         android:textStyle="bold" />
 
@@ -192,7 +182,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/dsec" />
 
     <ImageView
         android:layout_width="120dp"
@@ -202,6 +193,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/dsec" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -115,7 +115,7 @@ public class RMYDB extends SQLiteOpenHelper {
     public int R_FOOD_POINT(String USER_ID){
         int point_value;
         SQLiteDatabase db=this.getReadableDatabase();
-        String select="SELECT SUM("+RPARA.TABLE_POINT+") FROM "+RPARA.TABLE_NAME+" WHERE "+RPARA.TABLE_USER+" = "+USER_ID;
+        String select="SELECT SUM("+RPARA.TABLE_POINT+"*("+RPARA.TABLE_TOTAL_FOOD+" - "+RPARA.TABLE_FOOD_SOLD+") "+") FROM "+RPARA.TABLE_NAME+" WHERE "+RPARA.TABLE_USER+" = "+USER_ID;
         Cursor cursor=db.rawQuery(select,null);
         if(cursor.moveToFirst())
             point_value=cursor.getInt(0);
@@ -191,5 +191,4 @@ public class RMYDB extends SQLiteOpenHelper {
         db.close();
 
     }
-
 }

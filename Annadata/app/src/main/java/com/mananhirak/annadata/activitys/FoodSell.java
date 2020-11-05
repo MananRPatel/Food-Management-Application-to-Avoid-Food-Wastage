@@ -57,27 +57,22 @@ public class FoodSell extends AppCompatActivity {
         button1=findViewById(R.id.act_f_s_foodtimename);
         button2=findViewById(R.id.act_f_s_fooddatename);
 
-        Calendar calendar2=Calendar.getInstance();
+
 
         calendar=Calendar.getInstance();
         Hour=calendar.get(Calendar.AM_PM)==Calendar.PM?calendar.get(Calendar.HOUR)+12:calendar.get(Calendar.HOUR);
         Minute=calendar.get(Calendar.MINUTE);
 
-        calendar2.set(Calendar.HOUR,Hour%24);
-        calendar2.set(Calendar.MINUTE,Minute);
 
-        CharSequence charSequence= DateFormat.format("hh:mm a",calendar2);
+        CharSequence charSequence= DateFormat.format("hh:mm a",calendar);
         Food_Time=(String)charSequence;
+        Log.d("MANANANANAN","1->"+Food_Time);
 
         Day=calendar.get(Calendar.DATE);
         Month=calendar.get(Calendar.MONTH);
         Year=calendar.get(Calendar.YEAR);
 
-
-        calendar2.set(Calendar.YEAR,Year);
-        calendar2.set(Calendar.MONTH,Month);
-        calendar2.set(Calendar.DATE,Day);
-        CharSequence charSequence1= DateFormat.format("EEE, dd MMM  yyyy",calendar2);
+        CharSequence charSequence1= DateFormat.format("EEE, dd MMM  yyyy",calendar);
         Food_Date=(String)charSequence1;
 
         Time_Flag=false;
@@ -163,11 +158,12 @@ public class FoodSell extends AppCompatActivity {
                 Time_Flag= (Hour < i) || (Hour == i && Minute < i1);
 
                 Calendar calendar1=Calendar.getInstance();
-                calendar1.set(Calendar.HOUR,i);
+                calendar1.set(Calendar.HOUR,(i+12)%24);
                 calendar1.set(Calendar.MINUTE,i1);
 
                 CharSequence charSequence= DateFormat.format("hh:mm a",calendar1);
                 Food_Time=(String)charSequence;
+                Log.d("MANANANANAN","2->"+Food_Time);
 
             }
         },Hour,Minute,true);

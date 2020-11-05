@@ -57,10 +57,10 @@ public class DeliveryConform extends AppCompatActivity {
         s="Food Weight : "+rdetail.getFood_weight();
         t2.setText(s);
 
-        s="No. Order :"+bdetail.getBuyer_order();
+        s="Order no.  :  "+bdetail.getBuyer_order();
         t3.setText(s);
 
-        s="Food Information : "+rdetail.getFood_all_info();
+        s="Food : "+rdetail.getFood_all_info();
         t4.setText(s);
 
         s="Delivery Time : "+bdetail.getDelivery_time();

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/loginBkColor"
     android:orientation="vertical"
+    android:layout_marginTop="20dp"
     tools:context=".activitys.MainActivity">
 
     <LinearLayout
@@ -13,19 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="vertical">
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:text="@string/categories"
-            android:textColor="@color/gradientLightBlue"
-            android:textSize="20sp"
-            android:padding="5dp">
-
-        </TextView>
 
 
         <androidx.cardview.widget.CardView
@@ -45,27 +33,28 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/man" />
+                android:src="@drawable/man"
+                android:contentDescription="@string/dsec" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:fontFamily="@font/baloo"
                 android:padding="20dp"
-                android:text="Profile"
+                android:text="@string/profile"
                 android:textColor="@android:color/white"
                 android:textSize="30sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right|bottom"
+                android:layout_gravity="end|bottom"
                 android:background="#00000000"
                 android:fontFamily="@font/baloo"
                 android:padding="15dp"
-                android:text="expand all"
+                android:text="@string/expand"
                 android:textAllCaps="true"
                 android:textColor="@android:color/white"
                 android:textSize="15sp" />
@@ -92,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/baloo"
                 android:padding="25dp"
-                android:text="Retailer"
+                android:text="@string/retailer"
                 android:textSize="35sp" />
 
             <TextView
@@ -102,18 +91,19 @@
                 android:layout_gravity="bottom"
                 android:fontFamily="@font/baloo"
                 android:padding="13dp"
-                android:text="Expand all"
+                android:text="@string/expand"
                 android:textAllCaps="true"
                 android:textSize="15sp" />
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="right"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
                 android:layout_marginTop="-10dp"
                 android:layout_marginEnd="-20dp"
-                android:src="@drawable/shop_bag" />
+                android:src="@drawable/shop_bag"
+                android:contentDescription="@string/dsec" />
         </androidx.cardview.widget.CardView>
 
 
@@ -133,30 +123,31 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/shopping_cart" />
+                android:layout_marginStart="20dp"
+                android:src="@drawable/shopping_cart"
+                android:contentDescription="@string/dsec" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="right"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
                 android:fontFamily="@font/baloo"
                 android:padding="15dp"
-                android:text="Buyer"
+                android:text="@string/buyer"
                 android:textColor="@android:color/white"
                 android:textSize="30sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_gravity="right|bottom"
+                android:layout_gravity="end|bottom"
                 android:background="#00000000"
                 android:fontFamily="@font/baloo"
                 android:padding="15dp"
-                android:text="expand all"
+                android:text="@string/expand"
                 android:textAllCaps="true"
                 android:textColor="@android:color/white"
                 android:textSize="15sp" />
@@ -192,18 +183,19 @@
                 android:layout_gravity="bottom"
                 android:fontFamily="@font/baloo"
                 android:padding="10dp"
-                android:text="Expand all"
+                android:text="@string/expand"
                 android:textAllCaps="true"
                 android:textSize="15sp" />
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="right"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
                 android:layout_marginTop="-25dp"
                 android:layout_marginEnd="-5dp"
-                android:src="@drawable/express_delivery" />
+                android:src="@drawable/express_delivery"
+                android:contentDescription="@string/dsec" />
 
         </androidx.cardview.widget.CardView>
 

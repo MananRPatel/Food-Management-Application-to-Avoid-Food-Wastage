@@ -14,28 +14,20 @@
         android:focusableInTouchMode="true"
         tools:ignore="MissingConstraints">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/login_shape_bk"
+            android:orientation="vertical"
+            >
+
+            <ImageView
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:weightSum="12">
+                android:layout_width="match_parent"
+                android:background="@drawable/ic_login_bk"
+                android:contentDescription="@string/dsec" />
 
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:background="@drawable/login_shape_bk"
-                    android:orientation="vertical"
-                    android:layout_weight="3">
-
-                    <ImageView
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:background="@drawable/ic_login_bk"
-                        android:contentDescription="login background" />
-
-                </LinearLayout>
-
-            </LinearLayout>
+        </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,7 +80,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/primaryTextColor"
-                                android:hint="Name"
+                                android:hint="@string/name"
                                 android:inputType="textPersonName"
                                 android:maxLines="1"
                                 android:textSize="12sp" />
@@ -97,7 +89,7 @@
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginTop="5dp">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/signemail"
@@ -113,7 +105,7 @@
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginTop="5dp">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/signpassword"
@@ -129,7 +121,7 @@
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginTop="5dp">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/signuseraddress"
@@ -150,7 +142,7 @@
                             android:layout_margin="30dp"
                             android:layout_marginTop="20dp"
                             android:background="@drawable/login_button_bk"
-                            android:text="Register"
+                            android:text="@string/register"
                             android:textColor="@color/whiteTextColor"
                             android:textStyle="bold" />
 
@@ -206,7 +198,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/dsec" />
 
     <ImageView
         android:layout_width="150dp"
@@ -216,6 +209,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/dsec" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -94,8 +94,31 @@ public class BMYDB extends SQLiteOpenHelper {
         return bdetail;
     }
 
+    public List<BDETAIL> GET_HISTORY_DETAIL(String User_ID){
+        SQLiteDatabase db=this.getReadableDatabase();
+        String select="SELECT * FROM "+BPARA.TABLE_NAME+" WHERE "+BPARA.TABLE_CONFORM_ID+"=1"+" AND "+BPARA.TABLE_DELIVERY_BOY+"="+User_ID;
+        Cursor cursor=db.rawQuery(select,null);
+        List<BDETAIL> list=new ArrayList<>();
 
+        if(cursor.moveToFirst()){
+            do{
+                BDETAIL bdetail=new BDETAIL();
+                bdetail.setId(cursor.getInt(0));
+                bdetail.setSeller_id(cursor.getInt(1));
+                bdetail.setBuyer_id(cursor.getInt(2));
+                bdetail.setBuyer_order(cursor.getInt(3));
+                bdetail.setBuyer_address(cursor.getString(4));
+                bdetail.setDelivery_boy(cursor.getInt(5));
+                bdetail.setDelivery_time(cursor.getString(6));
+                bdetail.setConform_order(cursor.getInt(7));
+                list.add(bdetail);
+            }while(cursor.moveToNext());
+        }
 
+        cursor.close();
+        db.close();
+        return list;
+    }
 
 
     public void B_CONFORM_DELIVERY(String ID){

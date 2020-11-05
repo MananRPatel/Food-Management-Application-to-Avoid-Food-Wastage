@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitys.FoodDonate"></activity>
+        <activity android:name=".activitys.HistorySell"></activity>
+        <activity android:name=".activitys.HistoryDonate" />
+        <activity android:name=".activitys.FoodDonate" />
         <activity android:name=".activitys.FoodSell" />
         <activity android:name=".activitys.DeliveryConform" />
         <activity android:name=".activitys.SellConform" />

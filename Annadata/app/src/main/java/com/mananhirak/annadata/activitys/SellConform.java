@@ -6,6 +6,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +36,7 @@ public class SellConform extends AppCompatActivity {
     boolean Time_Flag;
     String Food_time;
     int Hour,Minute;
+    Calendar calendar;
 
 
     @Override
@@ -85,17 +87,14 @@ public class SellConform extends AppCompatActivity {
 
         bmydb =new BMYDB(SellConform.this);
 
-        Calendar calendar=Calendar.getInstance();
-        Calendar calendar2=Calendar.getInstance();
+        calendar=Calendar.getInstance();
 
         Hour=calendar.get(Calendar.AM_PM)==Calendar.PM?calendar.get(Calendar.HOUR)+12:calendar.get(Calendar.HOUR);
         Minute=calendar.get(Calendar.MINUTE);
 
-        calendar2.set(Calendar.HOUR,Hour%24);
-        calendar2.set(Calendar.MINUTE,Minute);
-
-        CharSequence charSequence= DateFormat.format("hh:mm a",calendar2);
-        Food_time=(String)charSequence;
+        CharSequence charSequence2= DateFormat.format("hh:mm a",calendar);
+        Food_time=(String)charSequence2;
+        Log.d("MANANANANAN","1->"+Food_time);
         Time_Flag=false;
 
         Button button1=findViewById(R.id.scordertime);
@@ -141,7 +140,7 @@ public class SellConform extends AppCompatActivity {
                     bdetail.setDelivery_boy(rmydb.R_USER_ALL_INFORMATION(String.valueOf(USER_SELLER_ALL_FOOD_ID)).getUser_id());
                     bdetail.setDelivery_time(Food_time);
                     bmydb.ADD_DETAIL(bdetail);
-                    Toast.makeText(SellConform.this,Food_time,Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(SellConform.this,Food_time,Toast.LENGTH_SHORT).show();
 
                     Toast.makeText(SellConform.this,"Thank You For Buying Food "+smydb.USER_NAME_GETTER(String.valueOf(USER_CURRENT)),Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(SellConform.this,MainActivity.class);
@@ -160,11 +159,12 @@ public class SellConform extends AppCompatActivity {
             public void onTimeSet(TimePicker timePicker, int i, int i1) {
                 Time_Flag=(i<Hour)||(i==Hour&&i1<Minute);
                 Calendar calendar1=Calendar.getInstance();
-                calendar1.set(Calendar.HOUR,i);
+                calendar1.set(Calendar.HOUR,(i+12)%24);
                 calendar1.set(Calendar.MINUTE,i1);
 
                 CharSequence charSequence= DateFormat.format("hh:mm a",calendar1);
                 Food_time=(String)charSequence;
+                Log.d("MANANANANAN","2->"+Food_time);
 
             }
         },Hour,Minute,true);

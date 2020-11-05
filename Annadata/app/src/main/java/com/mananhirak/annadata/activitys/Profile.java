@@ -30,7 +30,7 @@ public class Profile extends AppCompatActivity {
         TextView t1=findViewById(R.id.procartmoney);
         TextView t2=findViewById(R.id.prodonate);
         TextView t3=findViewById(R.id.prouser);
-        ImageView imageView=findViewById(R.id.prohistorybuttton);
+       // ImageView imageView=findViewById(R.id.prohistorybuttton);
         RMYDB db=new RMYDB(this);
         String s1="₹"+ db.R_FOOD_PRICE(String.valueOf(USER_id));
         String s2=String.valueOf(db.R_FOOD_POINT(String.valueOf(USER_id)));
@@ -41,13 +41,13 @@ public class Profile extends AppCompatActivity {
         SMYDB smydb=new SMYDB(this);
         t3.setText(smydb.USER_NAME_GETTER(String.valueOf(USER_id)));
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+      /*  imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(Profile.this,UserHistory.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         Button b=findViewById(R.id.prologoutb);
         b.setOnClickListener(new View.OnClickListener() {
