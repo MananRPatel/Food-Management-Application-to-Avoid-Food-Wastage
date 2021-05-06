@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/bg7"
+    tools:context=".activitys.FoodRetail">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rsellcard"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:elevation="10dp"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#00cae2"
+        android:rotation="3"
+        app:cardElevation="20dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rdonatecard"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:fontFamily="@font/playfair_display"
+            android:padding="20dp"
+            android:text="Food\nSell"
+            android:textAlignment="center"
+            android:textColor="#EA80FC"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="50dp"
+            android:background="@drawable/foodsell4"
+            android:layout_marginTop="10dp">
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rdonatecard"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:elevation="10dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        android:rotation="3"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="#86d0d1"
+        app:layout_constraintEnd_toStartOf="@+id/rsellcard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:fontFamily="@font/playfair_display"
+            android:padding="20dp"
+            android:text="Food Donate"
+            android:textAlignment="center"
+            android:textColor="#EA80FC"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/fooddoante"
+            android:layout_marginTop="10dp"
+            >
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

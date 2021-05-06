@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Annadata</string>
+    <string name="welcomeapp">Welcome to My application</string>
+    <string name="food_name">Food Name</string>
+    <string name="food_weight">Food Weight</string>
+    <string name="food_price">Food Value</string>
+    <string name="food_time">Food Time</string>
+    <string name="address">Address</string>
+    <string name="sell">Sell</string>
+    <string name="donate">Donate</string>
+    <string name="submit">Submit</string>
+    <string name="username">Username</string>
+    <string name="log_in">Log in</string>
+    <string name="categories">Categories</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account?</string>
+    <string name="login_signup_hint">Don\'t have an account?</string>
+    <string name="signin"> Sign In</string>
+    <string name="signup"> Sign Up</string>
+    <string name="food_market">Food Market</string>
+    <string name="conform">Confirm</string>
+    <string name="delivery_section">Delivery Section</string>
+    <string name="delivery">Delivery</string>
+    <string name="num_of_food_order">Num of Food Order</string>
+
+    <string name="TextView">TextView</string>
+    <string name="dsec"></string>
+    <string name="forgetpass">Forgot Password?</string>
+    <string name="login">Log in</string>
+    <string name="profile">Profile</string>
+    <string name="expand">expand all</string>
+    <string name="seller">Seller</string>
+    <string name="buyer">Buyer</string>
+    <string name="uname">User Name</string>
+    <string name="cartmoney">Cart  Money</string>
+    <string name="point">Donate Point</string>
+    <string name="txtv">textview</string>
+    <string name="txtv2">$100</string>
+    <string name="dcharge">Delevery \Charge</string>
+    <string name="daddress">Enter Address To Deliver Food</string>
+    <string name="history">HISTORY</string>
+    <string name="shistory">Sell \nHistory</string>
+    <string name="dhistory">Donate \nHistory</string>
+    <string name="delhistory">Delevery \nHistory</string>
+
+
+</resources>
